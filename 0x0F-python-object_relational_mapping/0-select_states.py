@@ -3,11 +3,12 @@
 from sys import argv
 from MySQLdb import connect
 
-db = connect(host='localhost', user=argv[1], passwd=argv[2], db=argv[3])
-cur = db.cursor()
+if __name__ == '__main__':
+    db = connect(host='localhost', user=argv[1], passwd=argv[2], db=argv[3])
+    cur = db.cursor()
 
-cur.execute("SELECT * FROM states ORDER BY states.id ASC")
-records = cur.fetchall()
+    cur.execute("SELECT * FROM states ORDER BY states.id ASC")
+    records = cur.fetchall()
 
-for row in records:
-    print(row)
+    for row in records:
+        print("{}".format(row))
