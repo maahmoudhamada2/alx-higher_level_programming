@@ -6,6 +6,5 @@ exports.addMeMaybe = function (number, theFunction) {
   for (let x = 0; x < number; x++) {
     count++;
   }
-
   theFunction(count);
 };
