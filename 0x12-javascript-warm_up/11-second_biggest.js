@@ -8,7 +8,7 @@ if (args.length === 0 || args.length === 1) {
   let tmp;
   for (let y = 0; y < args.length; y++) {
     for (let x = 0; x < args.length; x++) {
-      if (args[x] > args[x + 1]) {
+      if (Number.parseInt(args[x]) > Number.parseInt(args[x + 1])) {
         tmp = args[x];
         args[x] = args[x + 1];
         args[x + 1] = tmp;
